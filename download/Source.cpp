@@ -7,11 +7,11 @@
 
 using namespace std;
 
-mutex coutMutex;
+mutex cOutMutex;
 
 void print(stringstream& stream)
 {
-	lock_guard<mutex> lg(coutMutex);
+	lock_guard<mutex> lg(cOutMutex);
 	cout << stream.str();
 }
 
