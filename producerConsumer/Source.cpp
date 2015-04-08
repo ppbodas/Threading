@@ -41,7 +41,6 @@ int main()
 	std::future<bool>  fut1 = std::async(std::launch::async,producer);
 	std::future<bool>  fut2 = std::async(std::launch::async,consumer);
 
-	fut1.get();
 	fut2.get();
-	cin.get();
+	//cin.get();
 }

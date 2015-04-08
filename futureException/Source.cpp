@@ -3,34 +3,36 @@
 #include <exception>
 
 using namespace std;
-class MyException : public exception
+class SomeException : public exception
 {
 	const char * what () const throw ()
 	{
-		return "Exception";
+		return "Exception: Ah You Sent Even Nubmer";
 	}
 
 };
 
-bool isOdd (int num)
+bool onlyOddAllowed (int num)
 {
-	if (num & 0x0001)
+	if (num & 0x01)
 		return true;
 	
-	throw MyException();
+	throw SomeException();
 }
 
 int main()
 {
 
-	std::srand(unsigned(time(NULL)));
+	std::srand(unsigned(time(0)));
 
 	int num = rand();
-	std::future<bool>  fut = std::async(std::launch::async,[=]{return isOdd(num);});
+	std::future<bool>  fut = std::async(std::launch::async,[=]{return onlyOddAllowed(num);});
+
 
 	try
 	{
-		cout << num << " is " << fut.get() << endl; 
+		if (fut.get())
+			cout << num << " is Odd" << endl; 
 	}
 	catch(exception & e)
 	{
@@ -38,6 +40,5 @@ int main()
 	}
 
 
-
-	cin.get();
+	//cin.get();
 }

@@ -26,5 +26,5 @@ int main()
  
 
 
-	cin.get();
+	//cin.get();
 }

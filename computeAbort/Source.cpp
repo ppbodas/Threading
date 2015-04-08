@@ -7,13 +7,6 @@ using namespace std;
 
 bool bStopProcessing = false;
 
-class ComputeTerminatedException : public exception
-{
-	const char * what()
-	{
-		return "Compute Terminated by User";
-	}
-};
 
 bool stopProcessing()
 {
@@ -40,7 +33,7 @@ int fullCompute()
 			std::this_thread::sleep_for(std::chrono::seconds(3));
 			if (stopProcessing())
 			{
-				throw ComputeTerminatedException();
+				return -1;
 			}
 		}
 		return 555;
@@ -75,5 +68,5 @@ int main()
 		cout << fastCompute() << endl;
 	}
 
-	cin.get();
+	//cin.get();
 }

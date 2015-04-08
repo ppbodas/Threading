@@ -10,10 +10,10 @@ void addValue()
 {
 	for (int i=0; i < 100000; ++i)
 	{
-		std::lock_guard<std::mutex> lg(m);
-		//m.lock();
+		//std::lock_guard<std::mutex> lg(m);
+		m.lock();
 		++mValue;
-		//m.unlock();
+		m.unlock();
 	}
 }
 

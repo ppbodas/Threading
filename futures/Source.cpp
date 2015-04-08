@@ -5,7 +5,7 @@ using namespace std;
 
 bool isOdd (int num)
 {
-	if (num & 0x0001)
+	if (num & 0x1)
 		return true;
 
 	return false;
@@ -14,18 +14,18 @@ bool isOdd (int num)
 int main()
 {
 
-	std::srand(unsigned(time(NULL)));
+	std::srand(unsigned(time(0)));
 
 	int num = rand();
-	std::future<bool>  fut = std::async(std::launch::async,[=]{return isOdd(num);});
+	std::future<bool>  fut = std::async(std::launch::async, isOdd, num);
 
 	if (fut.get())
 	{
-		cout << num << " is Odd" << endl; 
+		cout << num << " is Odd Number" << endl; 
 	}
 	else
 	{
-		cout << num << " is Even" << endl; 
+		cout << num << " is Even Number" << endl; 
 	}
 
 
