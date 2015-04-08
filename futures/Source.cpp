@@ -19,7 +19,14 @@ int main()
 	int num = rand();
 	std::future<bool>  fut = std::async(std::launch::async,[=]{return isOdd(num);});
 
-	cout << num << " is " << fut.get() << endl; 
+	if (fut.get())
+	{
+		cout << num << " is Odd" << endl; 
+	}
+	else
+	{
+		cout << num << " is Even" << endl; 
+	}
 
 
 	//cin.get();

@@ -7,7 +7,7 @@ int mValue = 0;
 
 void addValue()
 {
-	for (int i=0; i < 10; ++i)
+	for (int i=0; i < 1000000; ++i)
 	{
 		++mValue;
 	}
@@ -26,5 +26,5 @@ int main()
  
 
 
-	//cin.get();
+	cin.get();
 }

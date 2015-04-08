@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	std::async(std::launch::async,[]{cout<<"Hello World" << endl;});
+	std::async(std::launch::async,[]{cout<<"Hello World from Worker" << endl;});
 
 	std::this_thread::sleep_for(std::chrono::seconds(3));
 

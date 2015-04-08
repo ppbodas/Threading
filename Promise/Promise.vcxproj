@@ -14,6 +14,7 @@
     <ProjectGuid>{CBCADC34-EEA6-4BE4-AAA5-CAA6FE33CE0B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Promise</RootNamespace>
+    <ProjectName>21Promise</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

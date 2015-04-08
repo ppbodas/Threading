@@ -14,7 +14,7 @@
     <ProjectGuid>{32ADC8DD-962E-499C-A609-7220F05889BC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>twoThreadsWithMutext</RootNamespace>
-    <ProjectName>twoThreadsM</ProjectName>
+    <ProjectName>50twoThreadsM</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
