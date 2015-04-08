@@ -15,5 +15,5 @@ int main()
 	cout << "Hello Form Main Thread" << endl;
 
 
-	cin.get();
+	//cin.get();
 }
